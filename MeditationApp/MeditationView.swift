@@ -18,6 +18,8 @@ struct MeditationView: View {
             
             //MARK: Meditation Details
             ZStack {
+                
+                //MARK: BACKGROUND
                 Color(red: 24/255, green: 23/255, blue: 22/255)
                 VStack(alignment: .leading, spacing: 24) {
                     VStack(alignment: .leading, spacing: 8) {
@@ -28,8 +30,26 @@ struct MeditationView: View {
                     .textCase(.uppercase)
                     .opacity(0.7)
                     
-                    Text("1 minuto de meditação")
-                    Text("Limpe sua mente e concetresse no som")
+                    //MARK: TITLE
+
+                    Text("1 Minute Relaxing Meditation")
+                        .font(.title)
+                    
+                    //MARK: PLAY BUTTON
+                    Button {
+                        
+                    } label: {
+                         Label("Play", systemImage: "play.fill")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding(.vertical)
+                            .frame(maxWidth: .infinity)
+                            .background(.white)
+                            .cornerRadius(29)
+                        
+                    }
+                    //MARK: DESCRIPTION
+                    Text("Clear your mind and slumber into nithingness. Allocate only a few moments for a quick breather.")
                     
                     Spacer()
                 }
