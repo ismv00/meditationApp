@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		950B40DE299DD1660047C850 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B40DD299DD1660047C850 /* PlayerView.swift */; };
+		950B40E0299DD53D0047C850 /* PlaybackControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B40DF299DD53D0047C850 /* PlaybackControlButton.swift */; };
 		9594ADBD299C827000389169 /* MeditationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594ADBC299C827000389169 /* MeditationAppApp.swift */; };
 		9594ADBF299C827000389169 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594ADBE299C827000389169 /* ContentView.swift */; };
 		9594ADC1299C827200389169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9594ADC0299C827200389169 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		950B40DD299DD1660047C850 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		950B40DF299DD53D0047C850 /* PlaybackControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlButton.swift; sourceTree = "<group>"; };
 		9594ADB9299C827000389169 /* MeditationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9594ADBC299C827000389169 /* MeditationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAppApp.swift; sourceTree = "<group>"; };
 		9594ADBE299C827000389169 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,11 +58,12 @@
 			isa = PBXGroup;
 			children = (
 				9594ADBC299C827000389169 /* MeditationAppApp.swift */,
+				950B40DF299DD53D0047C850 /* PlaybackControlButton.swift */,
 				9594ADCC299C897700389169 /* MeditationView.swift */,
+				950B40DD299DD1660047C850 /* PlayerView.swift */,
 				9594ADBE299C827000389169 /* ContentView.swift */,
 				9594ADC0299C827200389169 /* Assets.xcassets */,
 				9594ADC2299C827200389169 /* Preview Content */,
-				950B40DD299DD1660047C850 /* PlayerView.swift */,
 			);
 			path = MeditationApp;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				9594ADBF299C827000389169 /* ContentView.swift in Sources */,
 				9594ADCD299C897700389169 /* MeditationView.swift in Sources */,
+				950B40E0299DD53D0047C850 /* PlaybackControlButton.swift in Sources */,
 				9594ADBD299C827000389169 /* MeditationAppApp.swift in Sources */,
 				950B40DE299DD1660047C850 /* PlayerView.swift in Sources */,
 			);
