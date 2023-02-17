@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayerView: View {
+    var meditationVM: MeditationViewModel
     @State private var value: Double = 0.0
     @Environment(\.dismiss) var dismiss
     
@@ -15,7 +16,7 @@ struct PlayerView: View {
     var body: some View {
         ZStack {
             //MARK: Background Image
-            Image("image-stones")
+            Image(meditationVM.meditation.image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width)
@@ -41,7 +42,7 @@ struct PlayerView: View {
                     
                 }
                 //MARK: TITLE
-                Text("1 Minute Relaxing Meditation")
+                Text(meditationVM.meditation.title)
                     .font(.title)
                     .foregroundColor(.white)
                 
@@ -107,7 +108,8 @@ struct PlayerView: View {
 }
 
 struct PlayerView_Previews: PreviewProvider {
+    static let meditationVM = MeditationViewModel(meditation: Meditation.data)
     static var previews: some View {
-        PlayerView()
+        PlayerView(meditationVM: meditationVM)
     }
 }

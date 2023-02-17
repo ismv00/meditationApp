@@ -18,7 +18,7 @@ extension DateComponentsFormatter {
         return formatter
     }()
     
-    static let abbreviated: DateComponentsFormatter = {
+    static let positional: DateComponentsFormatter = {
         print("Initializing DateComponentesFormatter.positional")
         let formatter = DateComponentsFormatter()
         

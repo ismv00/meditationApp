@@ -28,7 +28,9 @@ struct MeditationView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Music")
-                        Text(meditationVM.meditation.duration.formatted() + "s")
+                        
+                        Text(DateComponentsFormatter.abbreviated.string(from: meditationVM.meditation.duration) ??
+                            meditationVM.meditation.duration.formatted() + "s")
                     }
                     .font(.subheadline)
                     .textCase(.uppercase)
@@ -63,7 +65,7 @@ struct MeditationView: View {
         }
         .ignoresSafeArea()
         .fullScreenCover(isPresented: $showPlayer) {
-            PlayerView()
+            PlayerView(meditationVM: meditationVM)
         }
     }
 }
