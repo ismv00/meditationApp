@@ -9,6 +9,9 @@ import SwiftUI
 
 struct PlayerView: View {
     @State private var value: Double = 0.0
+    @Environment(\.dismiss) var dismiss
+    
+
     var body: some View {
         ZStack {
             //MARK: Background Image
@@ -18,11 +21,17 @@ struct PlayerView: View {
                 .frame(width: UIScreen.main.bounds.width)
                 .ignoresSafeArea()
             
+            //MARK: BLUR VIEW
+            Rectangle()
+                .background(.thinMaterial)
+                .opacity(0.25)
+                .ignoresSafeArea()
+            
             VStack(spacing: 32) {
                 // MARK: DISMISS BUTTON
                 HStack {
                     Button {
-                        
+                        dismiss()
                     } label: {
                         Image(systemName: "xmark.circle.fill")
                             .font(.system(size: 36))
@@ -59,6 +68,7 @@ struct PlayerView: View {
                 }
                 
                 //MARK: PLAYBACK CONTROLLS
+                
                 HStack {
                     //MARK: Repeat Button
                     PlaybackControlButton(systemName: "repeat") {
