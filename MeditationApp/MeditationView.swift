@@ -9,11 +9,13 @@ import SwiftUI
 
 struct MeditationView: View {
     
+    @StateObject var meditationVM: MeditationViewModel
     @State private var showPlayer = false
+    
     var body: some View {
         VStack(spacing: 0) {
             // MARK: IMAGE
-            Image("image-stones")
+            Image(meditationVM.meditation.image)
                 .resizable()
                 .scaledToFill()
                 .frame(height: UIScreen.main.bounds.height / 3)
@@ -26,7 +28,7 @@ struct MeditationView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Music")
-                        Text("0s")
+                        Text(meditationVM.meditation.duration.formatted() + "s")
                     }
                     .font(.subheadline)
                     .textCase(.uppercase)
@@ -34,7 +36,7 @@ struct MeditationView: View {
                     
                     //MARK: TITLE
 
-                    Text("1 Minute Relaxing Meditation")
+                    Text(meditationVM.meditation.title)
                         .font(.title)
                     
                     //MARK: PLAY BUTTON
@@ -51,7 +53,7 @@ struct MeditationView: View {
                         
                     }
                     //MARK: DESCRIPTION
-                    Text("Clear your mind and slumber into nithingness. Allocate only a few moments for a quick breather.")
+                    Text(meditationVM.meditation.description)
                     
                     Spacer()
                 }
@@ -67,7 +69,8 @@ struct MeditationView: View {
 }
 
 struct MeditationView_Previews: PreviewProvider {
+    static let meditationVM = MeditationViewModel(meditation:Meditation.data)
     static var previews: some View {
-        MeditationView()
+        MeditationView(meditationVM: meditationVM)
     }
 }
